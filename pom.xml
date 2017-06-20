@@ -3,6 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.expedia</groupId>
 	<artifactId>expediaOffers</artifactId>
+	<packaging>war</packaging>
+	<name>expediaOffers</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
