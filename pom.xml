@@ -27,6 +27,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
+		<finalName>expediaOffers</finalName>
 	</build>
 	<dependencies>
 		<dependency>
