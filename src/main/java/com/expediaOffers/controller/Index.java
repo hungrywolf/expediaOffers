@@ -5,13 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class Offers {
-	
-	@RequestMapping("/offers.html")
-	public ModelAndView getOffers() {
- 
-		String message = "test";
-		return new ModelAndView("view", "message", message);
+public class Index {
+
+	@RequestMapping("/index.html")
+	public ModelAndView goToIndex() {
+		return new ModelAndView("index");
 	}
+
 
 }
