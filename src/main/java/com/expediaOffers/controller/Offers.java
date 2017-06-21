@@ -28,8 +28,11 @@ public class Offers extends AbstractController {
 	@RequestMapping(value = { "/offers", "/offers/{destinationName}" }, method = RequestMethod.GET, produces = CONTENT_TYPE)
 	public @ResponseBody List<Hotel> getOffers(
 			@PathVariable(value = "destinationName", required = false) String destinationName) {
-		logger.debug(new StringBuilder("destinationName value = ").append(
-				destinationName).toString());
+
+		if (logger.isDebugEnabled())
+			logger.debug(new StringBuilder("destinationName value = ").append(
+					destinationName).toString());
+
 		return restCall.getAllHotels(urlBuilder.getURi(destinationName));
 	}
 

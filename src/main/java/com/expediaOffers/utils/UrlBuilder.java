@@ -15,7 +15,11 @@ public class UrlBuilder {
 		if (destinationName != null) {
 			builder.queryParam("destinationName", destinationName);
 		}
-		logger.debug(new StringBuilder("builded url >> ").append(builder.toUriString()).toString());
+
+		if (logger.isDebugEnabled())
+			logger.debug(new StringBuilder("builded url >> ").append(
+					builder.toUriString()).toString());
+
 		return builder.toUriString();
 	}
 
