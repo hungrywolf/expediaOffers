@@ -3,7 +3,7 @@ Expidia Offer WEB APP  [![Build Status](https://travis-ci.org/hungrywolf/expedia
 
 *This project contains the sample code*
 
-Build using :
+Written using :
 
 Maven 3.1.0 </br>
 oraclejdk8 </br>
