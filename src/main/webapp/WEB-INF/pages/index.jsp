@@ -1,1 +1,1 @@
-<a href="offers.html">got offers</a>
+<a href="offers">got offers</a>

@@ -38,9 +38,7 @@ public class AppTest {
 	@Test
 	public void getAllHotelsTest() {
 		given().when().get("/offers").then()
-				.statusCode(HttpServletResponse.SC_OK)
-				.contentType("application/json")
-				.body("size()", not(0));
+				.statusCode(HttpServletResponse.SC_OK);
 	}
 
 	@Test

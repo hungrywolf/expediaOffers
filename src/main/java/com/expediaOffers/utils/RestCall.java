@@ -13,8 +13,7 @@ public class RestCall {
 	private RestTemplate restTemplate;
 
 	public List<Hotel> getAllHotels(String uri) {
-		OfferInfo offerInfo = restTemplate.getForObject(uri,
-				OfferInfo.class);
+		OfferInfo offerInfo = restTemplate.getForObject(uri, OfferInfo.class);
 
 		return offerInfo.getOffers().getHotel();
 	}

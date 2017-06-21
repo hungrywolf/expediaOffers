@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.expediaOffers.beans.Hotel;
 import com.expediaOffers.utils.RestCall;
@@ -26,14 +26,17 @@ public class Offers extends AbstractController {
 	private UrlBuilder urlBuilder;
 
 	@RequestMapping(value = { "/offers", "/offers/{destinationName}" }, method = RequestMethod.GET, produces = CONTENT_TYPE)
-	public @ResponseBody List<Hotel> getOffers(
+	public ModelAndView getOffers(
 			@PathVariable(value = "destinationName", required = false) String destinationName) {
 
 		if (logger.isDebugEnabled())
 			logger.debug(new StringBuilder("destinationName value = ").append(
 					destinationName).toString());
 
-		return restCall.getAllHotels(urlBuilder.getURi(destinationName));
+		List<Hotel> hotels = restCall.getAllHotels(urlBuilder
+				.getURi(destinationName));
+
+		return new ModelAndView("view", "hotels", hotels);
 	}
 
 }
