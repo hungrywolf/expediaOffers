@@ -1,13 +1,13 @@
-Expidia Offer WEB APP  <img src="https://travis-ci.org/hungrywolf/expediaOffers.svg?branch=master" alt="build:passed">
+Expidia Offer WEB APP  [![Build Status](https://travis-ci.org/hungrywolf/expediaOffers.svg?branch=master)](https://travis-ci.org/hungrywolf/expediaOffers)
 =========================================
 
 *This project contains the sample code*
 
 Build using :
 
-Maven 3.1.0 
-oraclejdk8
-Spring MVC
+Maven 3.1.0__
+oraclejdk8__
+Spring MVC__
 
 In order to execute all the tests, all you need to do is run:
 
