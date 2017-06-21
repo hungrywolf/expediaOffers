@@ -12,6 +12,11 @@ public class RestCall {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	/**
+	 * 
+	 * @param uri
+	 * @return
+	 */
 	public List<Hotel> getAllHotels(String uri) {
 		OfferInfo offerInfo = restTemplate.getForObject(uri, OfferInfo.class);
 

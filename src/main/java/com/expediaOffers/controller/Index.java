@@ -8,6 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Index extends AbstractController {
 
+	/**
+	 * 
+	 * @return
+	 */
 	@RequestMapping(value = "/index", method = RequestMethod.GET, produces = CONTENT_TYPE)
 	public ModelAndView goToIndex() {
 

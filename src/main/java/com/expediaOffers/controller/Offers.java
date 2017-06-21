@@ -25,6 +25,11 @@ public class Offers extends AbstractController {
 	@Autowired
 	private UrlBuilder urlBuilder;
 
+	/**
+	 * 
+	 * @param destinationName
+	 * @return
+	 */
 	@RequestMapping(value = { "/offers", "/offers/{destinationName}" }, method = RequestMethod.GET, produces = CONTENT_TYPE)
 	public ModelAndView getOffers(
 			@PathVariable(value = "destinationName", required = false) String destinationName) {

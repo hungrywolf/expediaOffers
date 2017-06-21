@@ -9,6 +9,11 @@ public class UrlBuilder {
 
 	private static final Logger logger = Logger.getLogger(UrlBuilder.class);
 
+	/**
+	 * 
+	 * @param destinationName
+	 * @return
+	 */
 	public String getURi(String destinationName) {
 		UriComponentsBuilder builder = UriComponentsBuilder
 				.fromUriString(URLs.OFFERSURL);
