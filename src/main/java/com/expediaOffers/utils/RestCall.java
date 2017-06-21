@@ -14,7 +14,8 @@ public class RestCall {
 	private RestTemplate restTemplate;
 
 	public List<Hotel> getAllHotels() {
-		OfferInfo offerInfo = restTemplate.getForObject(URLs.OFFERSURL, OfferInfo.class);
+		OfferInfo offerInfo = restTemplate.getForObject(URLs.OFFERSURL,
+				OfferInfo.class);
 
 		return offerInfo.getOffers().getHotel();
 	}

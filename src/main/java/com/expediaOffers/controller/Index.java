@@ -4,15 +4,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
 @Controller
-public class Index {
+public class Index extends AbstractController {
 
+	// @RequestMapping(method = RequestMethod.GET, produces = CONTENT_TYPE)
 	@RequestMapping("/index.html")
 	public ModelAndView goToIndex() {
-		
+
 		return new ModelAndView("index");
 	}
-
 
 }

@@ -1,8 +1,8 @@
-
 package com.expediaOffers.beans;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,60 +11,56 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "offerInfo",
-    "userInfo",
-    "offers"
-})
+@JsonPropertyOrder({ "offerInfo", "userInfo", "offers" })
 public class OfferInfo {
 
-    @JsonProperty("offerInfo")
-    private OfferInfo_ offerInfo;
-    @JsonProperty("userInfo")
-    private UserInfo userInfo;
-    @JsonProperty("offers")
-    private Offers offers;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+	@JsonProperty("offerInfo")
+	private OfferInfo_ offerInfo;
+	@JsonProperty("userInfo")
+	private UserInfo userInfo;
+	@JsonProperty("offers")
+	private Offers offers;
+	@JsonIgnore
+	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("offerInfo")
-    public OfferInfo_ getOfferInfo() {
-        return offerInfo;
-    }
+	@JsonProperty("offerInfo")
+	public OfferInfo_ getOfferInfo() {
+		return offerInfo;
+	}
 
-    @JsonProperty("offerInfo")
-    public void setOfferInfo(OfferInfo_ offerInfo) {
-        this.offerInfo = offerInfo;
-    }
+	@JsonProperty("offerInfo")
+	public void setOfferInfo(OfferInfo_ offerInfo) {
+		this.offerInfo = offerInfo;
+	}
 
-    @JsonProperty("userInfo")
-    public UserInfo getUserInfo() {
-        return userInfo;
-    }
+	@JsonProperty("userInfo")
+	public UserInfo getUserInfo() {
+		return userInfo;
+	}
 
-    @JsonProperty("userInfo")
-    public void setUserInfo(UserInfo userInfo) {
-        this.userInfo = userInfo;
-    }
+	@JsonProperty("userInfo")
+	public void setUserInfo(UserInfo userInfo) {
+		this.userInfo = userInfo;
+	}
 
-    @JsonProperty("offers")
-    public Offers getOffers() {
-        return offers;
-    }
+	@JsonProperty("offers")
+	public Offers getOffers() {
+		return offers;
+	}
 
-    @JsonProperty("offers")
-    public void setOffers(Offers offers) {
-        this.offers = offers;
-    }
+	@JsonProperty("offers")
+	public void setOffers(Offers offers) {
+		this.offers = offers;
+	}
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
+	@JsonAnyGetter
+	public Map<String, Object> getAdditionalProperties() {
+		return this.additionalProperties;
+	}
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+	@JsonAnySetter
+	public void setAdditionalProperty(String name, Object value) {
+		this.additionalProperties.put(name, value);
+	}
 
 }
