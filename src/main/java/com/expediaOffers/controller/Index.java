@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.expediaOffers.formbeans.OffersForm;
+
 @Controller
 public class Index extends AbstractController {
 
@@ -14,8 +16,9 @@ public class Index extends AbstractController {
 	 */
 	@RequestMapping(value = "/index", method = RequestMethod.GET, produces = CONTENT_TYPE)
 	public ModelAndView goToIndex() {
-
-		return new ModelAndView("index");
+		OffersForm offersForm = new OffersForm();
+		
+		return new ModelAndView("index","offersForm", offersForm);
 	}
 
 }
