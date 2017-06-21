@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css"
 	rel="stylesheet" type="text/css">
-<title>jQuery Paging Plugin Demo</title>
+<title>Expedia Offers</title>
 <link rel="stylesheet"
 	href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link href="<c:url value="/resources/css/paging.css" />"

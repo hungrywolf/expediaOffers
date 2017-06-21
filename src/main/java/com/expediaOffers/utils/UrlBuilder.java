@@ -5,14 +5,21 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.expediaOffers.commons.URLs;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UrlBuilder.
+ */
 public class UrlBuilder {
 
+	/** The Constant logger. */
 	private static final Logger logger = Logger.getLogger(UrlBuilder.class);
 
 	/**
-	 * 
+	 * Gets the u ri.
+	 *
 	 * @param destinationName
-	 * @return
+	 *            the destination name
+	 * @return the u ri
 	 */
 	public String getURi(String destinationName) {
 		UriComponentsBuilder builder = UriComponentsBuilder

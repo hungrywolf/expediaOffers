@@ -37,7 +37,7 @@ public class AppTest {
 
 	@Test
 	public void getAllHotelsTest() {
-		given().when().get("/offers").then()
+		given().when().post("/offers").then()
 				.statusCode(HttpServletResponse.SC_OK);
 	}
 
