@@ -37,13 +37,15 @@ public class AppTest {
 
 	@Test
 	public void getAllHotelsTest() {
-		given().when().get("/offers.html").then()
-				.statusCode(HttpServletResponse.SC_OK);
+		given().when().get("/offers").then()
+				.statusCode(HttpServletResponse.SC_OK)
+				.contentType("application/json")
+				.body("size()", not(0));
 	}
 
 	@Test
 	public void indexTest() {
-		given().when().get("/index.html").then()
+		given().when().get("/index").then()
 				.statusCode(HttpServletResponse.SC_OK);
 	}
 }

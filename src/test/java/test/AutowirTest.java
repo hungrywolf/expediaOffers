@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.expediaOffers.utils.RestCall;
+import com.expediaOffers.utils.UrlBuilder;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:applicationContextTest.xml" })
@@ -24,7 +25,7 @@ public class AutowirTest {
 	public void restTemplateAuto() {
 		assertThat(restTemplate, is(notNullValue()));
 	}
-	
+
 	@Autowired
 	private RestCall restCall;
 
@@ -32,12 +33,12 @@ public class AutowirTest {
 	public void restCallAuto() {
 		assertThat(restCall, is(notNullValue()));
 	}
-	
+
 	@Autowired
-	private UriComponentsBuilder builder ;
-	
+	private UrlBuilder urlBuilder;
+
 	@Test
-	public void builderAuto() {
-		assertThat(builder, is(notNullValue()));
+	public void urlBuilderAuto() {
+		assertThat(urlBuilder, is(notNullValue()));
 	}
 }

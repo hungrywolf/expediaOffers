@@ -17,7 +17,7 @@
  	
  	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate"></bean>
  	<bean id="restCall" class="com.expediaOffers.utils.RestCall"></bean>
- 	<bean id="builder" class="org.springframework.web.util.UriComponentsBuilder"></bean>
+ 	<bean id="urlBuilder" class="com.expediaOffers.utils.UrlBuilder"></bean>
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
