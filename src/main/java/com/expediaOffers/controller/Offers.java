@@ -11,15 +11,15 @@ import com.expediaOffers.beans.Hotel;
 import com.expediaOffers.utils.RestCall;
 
 @Controller
-public class Offers {
+public class Offers extends AbstractController {
 	@Autowired
 	private RestCall restCall;
-	
+
 	@RequestMapping("/offers.html")
 	public ModelAndView getOffers() {
- 
+
 		List<Hotel> hotels = restCall.getAllHotels();
-		
+
 		return new ModelAndView("view", "hotels", hotels);
 	}
 
