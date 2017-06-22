@@ -25,6 +25,42 @@
 	  <input type="text" name="daterange" id="daterange" class="form-control"/>
 	  <form:errors path="daterange" />
     </div>
+    <div class="form-check form-check-inline">
+    <label for="starRating">Hotel Star rating:</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="starRating" value="1"/> 1
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="starRating" value="2"/> 2
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="starRating" value="3"/> 3
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="starRating" value="4"/> 4
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="starRating" value="5"/> 5
+  		</label>  		  		  		  		
+	</div>
+	<div class="form-check form-check-inline">
+    <label for="guestRating">Hotel guest rating:</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="guestRating" value="1"/> 1
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="guestRating" value="2"/> 2
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="guestRating" value="3"/> 3
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="guestRating" value="4"/> 4
+  		</label>
+  		<label class="form-check-label">
+    		<form:checkbox class="form-check-input" path="guestRating" value="5"/> 5
+  		</label>  		  		  		  		
+	</div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form:form>
 </div>

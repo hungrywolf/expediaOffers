@@ -6,6 +6,12 @@ package com.expediaOffers.formbeans;
  */
 public class OffersForm {
 
+	/** The star rating. */
+	private String[] starRating;
+
+	/** The guest rating. */
+	private String[] guestRating;
+
 	/** The destination name. */
 	private String destinationName;
 
@@ -50,6 +56,44 @@ public class OffersForm {
 		this.destinationName = destinationName;
 	}
 
+	/**
+	 * Gets the star rating.
+	 *
+	 * @return the star rating
+	 */
+	public String[] getStarRating() {
+		return starRating;
+	}
+
+	/**
+	 * Sets the star rating.
+	 *
+	 * @param starRating
+	 *            the new star rating
+	 */
+	public void setStarRating(String[] starRating) {
+		this.starRating = starRating;
+	}
+
+	/**
+	 * Gets the guest rating.
+	 *
+	 * @return the guest rating
+	 */
+	public String[] getGuestRating() {
+		return guestRating;
+	}
+
+	/**
+	 * Sets the guest rating.
+	 *
+	 * @param guestRating
+	 *            the new guest rating
+	 */
+	public void setGuestRating(String[] guestRating) {
+		this.guestRating = guestRating;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -60,7 +104,9 @@ public class OffersForm {
 
 		return new StringBuilder().append("destinationName=")
 				.append(destinationName).append(" ").append("daterange=")
-				.append(daterange).toString();
+				.append(daterange).append(" ").append("starRating=")
+				.append(starRating).append(" ").append("guestRating=")
+				.append(guestRating).toString();
 	}
 
 }

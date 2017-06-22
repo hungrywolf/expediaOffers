@@ -40,7 +40,6 @@ public class Offers extends AbstractController {
 	 *            the offers form
 	 * @return the offers
 	 */
-	@SuppressWarnings("null")
 	@RequestMapping(value = { "/offers" }, method = RequestMethod.POST, produces = CONTENT_TYPE)
 	public ModelAndView getOffers(
 			@ModelAttribute("OffersForm") OffersForm offersForm) {
@@ -49,8 +48,8 @@ public class Offers extends AbstractController {
 			logger.debug(new StringBuilder("OffersForm to String")
 					.append(offersForm.toString()));
 
-		List<Hotel> hotels = restCall.getAllHotels(urlBuilder.getURi(offersForm
-				.getDestinationName()));
+		List<Hotel> hotels = restCall.getAllHotels(urlBuilder
+				.getURi(offersForm));
 
 		if (!hotels.isEmpty()) {
 			return new ModelAndView("view", "hotels", hotels);

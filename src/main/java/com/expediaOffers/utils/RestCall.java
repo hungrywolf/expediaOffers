@@ -36,6 +36,9 @@ public class RestCall {
 				OfferInfo.class);
 		OfferInfo offerInfo = response.getBody();
 
+		if (logger.isDebugEnabled())
+			logger.debug(response.getBody());
+
 		if (response.hasBody() && offerInfo.getOffers().getHotel() != null) {
 			return offerInfo.getOffers().getHotel();
 		} else {

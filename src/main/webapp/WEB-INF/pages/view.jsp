@@ -20,8 +20,9 @@
 		<tbody>
 			<c:forEach items="${hotels}" var="hotel">
 				<tr>
-					<td><a
-						href="http://<c:out
+					<td>
+					<div class="star-ratings-sprite"><span style="width:<c:out value="${hotel.getHotelInfo().getHotelStarRating()*20}" />%" class="star-ratings-sprite-rating"></span></div>
+					<a href="http://<c:out
 								value="${hotel.getHotelUrls().getHotelSearchResultUrl()}" />"><c:out
 								value="${hotel.getHotelInfo().getHotelName()}" /></a> / <c:out value="${hotel.getHotelInfo().getHotelCity()}" />
 						<p class="text-left"/>
