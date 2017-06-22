@@ -22,8 +22,7 @@
 				<tr>
 					<td>
 					<div class="star-ratings-sprite"><span style="width:<c:out value="${hotel.getHotelInfo().getHotelStarRating()*20}" />%" class="star-ratings-sprite-rating"></span></div>
-					<a href="//<c:out
-								value="${hotel.getHotelUrls().getHotelSearchResultUrl()}" />"><c:out
+					<a href="#"><c:out
 								value="${hotel.getHotelInfo().getHotelName()}" /></a> / <c:out value="${hotel.getHotelInfo().getHotelCity()}" />
 						<p class="text-left"/>
 						<p class="text-left"/>
