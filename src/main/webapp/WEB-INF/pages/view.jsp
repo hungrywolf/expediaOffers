@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css"
+<link href="//www.jqueryscript.net/css/jquerysctipttop.css"
 	rel="stylesheet" type="text/css">
 <title>Expedia Offers</title>
 <link rel="stylesheet"
-	href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link href="<c:url value="/resources/css/paging.css" />"
 	rel="stylesheet" />
 </head>
@@ -22,7 +22,7 @@
 				<tr>
 					<td>
 					<div class="star-ratings-sprite"><span style="width:<c:out value="${hotel.getHotelInfo().getHotelStarRating()*20}" />%" class="star-ratings-sprite-rating"></span></div>
-					<a href="http://<c:out
+					<a href="//<c:out
 								value="${hotel.getHotelUrls().getHotelSearchResultUrl()}" />"><c:out
 								value="${hotel.getHotelInfo().getHotelName()}" /></a> / <c:out value="${hotel.getHotelInfo().getHotelCity()}" />
 						<p class="text-left"/>
@@ -52,9 +52,9 @@
 		</tbody>
 	</table>
 	<script type="text/javascript"
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	<script type="text/javascript"
 		src="<c:url value="/resources/js/paging.js" />"></script>
 	<script type="text/javascript">
