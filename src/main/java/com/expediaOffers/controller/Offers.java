@@ -55,7 +55,7 @@ public class Offers extends AbstractController {
 			return new ModelAndView("view", "hotels", hotels);
 		} else {
 			return new ModelAndView("nodata", "message", String.format(
-					NODATAFOUND, offersForm.toString()));
+					NODATAFOUND, "in the index page"));
 		}
 
 	}
