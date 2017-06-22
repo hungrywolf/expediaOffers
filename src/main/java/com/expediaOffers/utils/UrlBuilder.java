@@ -1,6 +1,10 @@
 package com.expediaOffers.utils;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 import org.apache.log4j.Logger;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -16,6 +20,12 @@ public class UrlBuilder {
 
 	/** The Constant logger. */
 	private static final Logger logger = Logger.getLogger(UrlBuilder.class);
+
+	/** The date formatter. */
+	private DateFormat formatter1 = new SimpleDateFormat("MM/dd/yyyy"); 
+	
+	/** The date formatter */
+	private DateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd"); 
 
 	/**
 	 * Gets the u ri.
@@ -39,8 +49,18 @@ public class UrlBuilder {
 			if (!"".equals(offersForm.getDaterange())) {
 				String[] MaxMinDate = offersForm.getDaterange().split("-");
 				if (MaxMinDate.length == 2) {
-					builder.queryParam("minTripStartDate", MaxMinDate[0]);
-					builder.queryParam("maxTripStartDate", MaxMinDate[1]);
+					try {
+						Date maxDateFormatter1 = (Date)formatter1.parse(MaxMinDate[0]);
+						Date minDateFormatter1 = (Date)formatter1.parse(MaxMinDate[1]);
+						
+						String maxDate = formatter2.format(maxDateFormatter1);
+						String minDate = formatter2.format(minDateFormatter1);
+						
+						builder.queryParam("minTripStartDate", maxDate);
+						builder.queryParam("maxTripStartDate", minDate);
+					} catch (ParseException e) {
+						logger.error("wrong date formate",e);
+					}
 				}
 			}
 		}

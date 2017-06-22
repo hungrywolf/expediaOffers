@@ -2,14 +2,10 @@ package test;
 
 import static com.jayway.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertEquals;
 
-import com.expediaOffers.beans.Hotel;
 import com.expediaOffers.formbeans.OffersForm;
 import com.expediaOffers.utils.UrlBuilder;
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
@@ -73,7 +69,8 @@ public class AppTest {
 		offersForm.setGuestRating(new String[] { "1", "2", "3", "4", "5" });
 		offersForm.setStarRating(new String[] { "1", "2", "3", "4", "5" });
 		UrlBuilder url = new UrlBuilder();
-		assertEquals(url.getURi(offersForm),
-				"https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel&minTripStartDate=06/22/2017%20&maxTripStartDate=%2006/22/2017&minStarRating=1&maxStarRating=5&minGuestRating=1&maxGuestRating=5");
+		assertEquals(
+				"https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel&minTripStartDate=2017-06-22&maxTripStartDate=2017-06-22&minStarRating=1&maxStarRating=5&minGuestRating=1&maxGuestRating=5",
+				url.getURi(offersForm));
 	}
 }

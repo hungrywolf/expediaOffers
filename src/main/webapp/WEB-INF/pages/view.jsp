@@ -21,27 +21,41 @@
 			<c:forEach items="${hotels}" var="hotel">
 				<tr>
 					<td>
-					<div class="star-ratings-sprite"><span style="width:<c:out value="${hotel.getHotelInfo().getHotelStarRating()*20}" />%" class="star-ratings-sprite-rating"></span></div>
-					<a href="#"><c:out
-								value="${hotel.getHotelInfo().getHotelName()}" /></a> / <c:out value="${hotel.getHotelInfo().getHotelCity()}" />
-						<p class="text-left"/>
-						<p class="text-left"/>
-						<p class="text-left">from <c:out
-								value="${hotel.getHotelPricingInfo().getTotalPriceValue()}" />/<c:out
-								value="${hotel.getHotelPricingInfo().getCurrency()}" /> </p>
-						<h3>to
-						<c:out value="${hotel.getHotelPricingInfo().getAveragePriceValue()}" />/
-						<c:out value="${hotel.getHotelPricingInfo().getCurrency()}" /></h3>
+						<div class="star-ratings-sprite">
+							<span
+								style="width:<c:out value="${hotel.getHotelInfo().getHotelStarRating()*20}" />%"
+								class="star-ratings-sprite-rating"></span>
+						</div> <a href="#"><c:out
+								value="${hotel.getHotelInfo().getHotelName()}" /></a> / <c:out
+							value="${hotel.getHotelInfo().getHotelCity()}" />
+						<p class="text-left" />
+						<p class="text-left" />
+						<p class="text-left">
+							from
+							<c:out
+								value="${hotel.getHotelPricingInfo().getTotalPriceValue()}" />
+							/
+							<c:out value="${hotel.getHotelPricingInfo().getCurrency()}" />
+						</p>
+						<h3>
+							to
+							<c:out
+								value="${hotel.getHotelPricingInfo().getAveragePriceValue()}" />
+							/
+							<c:out value="${hotel.getHotelPricingInfo().getCurrency()}" />
+						</h3>
 
-								
-						<p class="text-right"><c:out
-								value="${hotel.getHotelInfo().getPromotionDescription()}" /></p>
+
+						<p class="text-right">
+							<c:out value="${hotel.getHotelInfo().getPromotionDescription()}" />
+						</p>
 						<p class="text-right">
 							Guest Rating :
 							<c:out
 								value="${hotel.getHotelInfo().getHotelGuestReviewRating()}" />
 							/5
-						</p></td>
+						</p>
+					</td>
 					<td><img
 						src="<c:out
 							value="${hotel.getHotelInfo().getHotelImageUrl()}" />"
