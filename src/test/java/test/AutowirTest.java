@@ -21,6 +21,10 @@ public class AutowirTest {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	/**
+	 * Test the Autowired for rest template
+	 * 
+	 */
 	@Test
 	public void restTemplateAuto() {
 		assertThat(restTemplate, is(notNullValue()));
@@ -29,6 +33,10 @@ public class AutowirTest {
 	@Autowired
 	private RestCall restCall;
 
+	/**
+	 * Test the Autowired for rest call
+	 * 
+	 */
 	@Test
 	public void restCallAuto() {
 		assertThat(restCall, is(notNullValue()));
@@ -37,6 +45,10 @@ public class AutowirTest {
 	@Autowired
 	private UrlBuilder urlBuilder;
 
+	/**
+	 * Test the Autowired for url builder
+	 * 
+	 */
 	@Test
 	public void urlBuilderAuto() {
 		assertThat(urlBuilder, is(notNullValue()));

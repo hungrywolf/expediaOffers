@@ -35,12 +35,24 @@ public class AppTest {
 				.build();
 	}
 
+	/**
+	 * Test the offers Controller.
+	 * 
+	 * Controller will return 200 it its working fine,
+	 * 
+	 */
 	@Test
 	public void getAllHotelsTest() {
 		given().when().post("/offers").then()
 				.statusCode(HttpServletResponse.SC_OK);
 	}
 
+	/**
+	 * Test the index Controller.
+	 * 
+	 * Controller will return 200 it its working fine,
+	 * 
+	 */
 	@Test
 	public void indexTest() {
 		given().when().get("/index").then()
