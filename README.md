@@ -10,7 +10,7 @@ oraclejdk8 </br>
 Spring MVC </br>
 Java Doc </br>
 
-In order to execute all the tests, all you need to do is run:
+In order to build and run locally, all you need to do is run:
 
     $ mvn clean package
     $ java -jar .\target\dependency\webapp-runner.jar .\target\*.war
